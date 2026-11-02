@@ -1,5 +1,5 @@
 const tabs=[...document.querySelectorAll('[data-tab]')];
-function route(){const process=location.hash==='#tervezes';document.getElementById('home').hidden=process;document.getElementById('process').hidden=!process;tabs.forEach(a=>{if(a.dataset.tab===(process?'process':'home'))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});if(process||location.hash==='#fooldal')window.scrollTo(0,0);}
+function route(){const selected=location.hash==='#tervezes'?'process':location.hash==='#mellekletek'?'attachments':'home';for(const id of ['home','process','attachments'])document.getElementById(id).hidden=id!==selected;tabs.forEach(a=>{if(a.dataset.tab===selected)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});if(selected!=='home'||location.hash==='#fooldal')window.scrollTo(0,0);}
 window.addEventListener('hashchange',route);route();
 const input=document.getElementById('step-input');let viewerModule;
 input.addEventListener('change',async()=>{const file=input.files[0];if(!file)return;const status=document.getElementById('model-status');if(!/\.(stp|step)$/i.test(file.name)){status.textContent='Kérlek, STEP vagy STP fájlt válassz.';return;}if(file.size>30*1024*1024){status.textContent='A böngészős előnézethez legfeljebb 30 MB-os fájlt válassz.';return;}status.textContent='A 3D megjelenítő betöltése…';input.disabled=true;try{viewerModule=viewerModule||await import('./viewer.js');await viewerModule.openStep(file);}catch(error){status.textContent='A modell nem nyitható meg. Ellenőrizd a STEP-fájlt és az internetkapcsolatot.';console.error(error);}finally{input.disabled=false;input.value='';}});
@@ -28,9 +28,9 @@ function closeFilmFallback(){filmFrame.classList.remove('is-expanded');document.
 filmFullscreen.addEventListener('click',async()=>{if(document.fullscreenElement===filmFrame){await document.exitFullscreen();return;}if(filmFrame.classList.contains('is-expanded')){closeFilmFallback();return;}try{if(!filmFrame.requestFullscreen)throw Error('Use expanded view');await filmFrame.requestFullscreen();}catch{filmFrame.classList.add('is-expanded');document.body.classList.add('film-expanded');}updateFilmFullscreen();});
 document.addEventListener('fullscreenchange',updateFilmFullscreen);
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&filmFrame.classList.contains('is-expanded'))closeFilmFallback();});
-window.addEventListener('hashchange',()=>{if(location.hash==='#tervezes'){homeVideo.pause();if(filmFrame.classList.contains('is-expanded'))closeFilmFallback();if(document.fullscreenElement===filmFrame)document.exitFullscreen().catch(()=>{});}});
+window.addEventListener('hashchange',()=>{if(location.hash==='#tervezes'||location.hash==='#mellekletek'){homeVideo.pause();if(filmFrame.classList.contains('is-expanded'))closeFilmFallback();if(document.fullscreenElement===filmFrame)document.exitFullscreen().catch(()=>{});}});
 
-// Load the approved earlier model when its section comes into view.
+// Load the approved final model when its section comes into view.
 const defaultModelViewer=document.getElementById('viewer');
 let defaultModelStarted=false;
 async function loadDefaultModel(){
@@ -41,9 +41,9 @@ async function loadDefaultModel(){
  input.disabled=true;openButton.disabled=true;
  status.textContent='A 3D modell betöltése…';
  try{
-  const response=await fetch('assets/gitartarto-v1.step');
+  const response=await fetch('assets/gitartarto-vegleges.step');
   if(!response.ok)throw Error('STEP download failed');
-  const modelFile=new File([await response.arrayBuffer()],'Gitártartó — korábbi prototípus.step');
+  const modelFile=new File([await response.arrayBuffer()],'Gitártartó — végleges CAD-modell.step');
   viewerModule=viewerModule||await import('./viewer.js');
   await viewerModule.openStep(modelFile);
  }catch(error){

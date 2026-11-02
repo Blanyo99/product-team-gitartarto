@@ -6,6 +6,7 @@ Ketten tanulunk meg AI segítségével gitártartót tervezni, rövid bemutatóv
 
 - **A termék:** az ötlet, a videók helye és a valóban forgatható STEP-modell.
 - **A tervezés folyamata:** referenciák, nehézségek, nyomtathatóság és a weboldal készítésének története.
+- **Mellékletek:** darabjegyzék, robbantott ábra és a 8 nyomtatandó alkatrész STEP-fájljai.
 - Saját Product Team logó és a Gibson Les Paul Dark Cherry Sunburst ihlette színvilág.
 
 ## Helyi megnyitás
@@ -22,7 +23,7 @@ GitHub Pages: **Settings → Pages → Deploy from a branch → main → / (root
 
 ## A modell későbbi frissítése
 
-Jelenleg a korábban bemutatott **v1 prototípus** töltődik be az `assets/gitartarto-v1.step` fájlból. A legújabb modellre csak külön jelzés után váltunk.
+A forgatható megjelenítőben a **végleges CAD-modell** töltődik be az `assets/gitartarto-vegleges.step` fájlból. A Mellékletek fülön külön is letölthető mind a 8 nyomtatandó alkatrész.
 
 Az új modell STEP-fájlja az `assets` mappába kerül. Az új fájlnevet az `app.js` `loadDefaultModel` függvényében és az `index.html` letöltési linkjében állítjuk be. A forgatás, nagyítás és műhelyháttér tovább használható.
 
@@ -32,6 +33,6 @@ A Blanka otthonról videó az `index.html` `blanka-video` elemének `src` attrib
 
 ## Források és állapot
 
-A natív Fusion-források és a nyomtatási fájlok egyelőre a közös munkamappában vannak. A végleges modell, a felvételek és a részletes leadási napló később kerülhetnek ide. A prototípus teherbírását még nem igazoltuk.
+A végleges STEP-modell, a nyomtatandó alkatrészek, a darabjegyzék és a robbantott ábra az `assets` mappában találhatók. A natív Fusion-források a közös munkamappában vannak. A felvételek később kerülnek ide. A prototípus működését és teherbírását még fizikai próbával ellenőrizzük.
 
 A gitár képe és a színinspiráció a [Gibson termékoldaláról](https://www.gibson.com/en-eu/products/gibson-les-paul-standard-50s-plain-top-dark-cherry-sunburst-exclusive) származik. A termékfotó a Gibson tulajdona. A Product Team projekt nem hivatalos Gibson-oldal. A kódhoz még nem választottunk külön nyílt forráskódú licencet.
