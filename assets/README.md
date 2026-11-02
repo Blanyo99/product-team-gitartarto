@@ -6,4 +6,10 @@
 - workshop-backdrop.svg: saját műhelyháttér.
 - les-paul.png: a README-ben hivatkozott Gibson-termékfotó.
 
-A legújabb modell és a videók később kerülnek ide.
+- gitartarto-vegleges.step és .png: végleges CAD-modell és Fusion-előnézet.
+- P01–P06 STEP-fájlok: 8 külön nyomtatandó alkatrész, a bal és jobb darabok külön.
+- nyomtathato-step-csomag.zip: a 8 alkatrész egy csomagban.
+- attachments-bom.pdf és .txt: darabjegyzék.
+- attachments-exploded.png és .pdf: robbantott szerelési ábra.
+
+A videók később kerülnek ide. A fizikai próba még hátravan.

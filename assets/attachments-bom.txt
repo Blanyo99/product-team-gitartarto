@@ -1,0 +1,27 @@
+LES PAUL AGS - DARABJEGYZEK
+2026.11.02. | Prototípus
+
+P01 | 1 db | Fali konzol | PETG; egyben nyomtatva
+P02 | 1 db | Belső vezetőkeret / Auto-Swivel | PETG; egyben nyomtatva
+P03 | 1 db | Csúszóvilla a két tartókarral | PETG; egyben nyomtatva
+P04L | 1 db | Bal első zárófül | PETG; külön bal alkatrész
+P04R | 1 db | Jobb első zárófül | PETG; külön jobb alkatrész
+P05L | 1 db | Bal excenter a forgó tengellyel | PETG; egyben nyomtatva
+P05R | 1 db | Jobb excenter a forgó tengellyel | PETG; egyben nyomtatva
+P06 | 1 db | Alsó, levehető horonygerenda | PETG; egyben nyomtatva
+H01 | 2 db | Fém nyomórugó | Külső Ø8; szabad hossz 25; huzal Ø0,6 mm. Végleges rugó: lásd megjegyzés.
+H02 | 2 db | Acél illesztőcsap | Ø2 × 8 mm; excenterhez
+H03 | 2 db | Belső kulcsnyílású csavar | M4 × 40; fej Ø7 × 4 mm
+H04 | 2 db | Lapos alátét M4 | Külső Ø9; belső Ø4,3; vastagság 0,8 mm
+H05 | 2 db | Hatlapú anya M4 | Laptáv 7; magasság 3,2 mm
+H06 | 1 db | Hatlapfejű csavar | M5 × 40; laptáv 8; fejmagasság 3,5 mm
+H07 | 2 db | Lapos alátét M5 | Külső Ø10; belső Ø5,3; vastagság 1 mm
+H08 | 1 db | Önzáró anya M5 | CAD-burkolat: laptáv 8; magasság 4 mm; tényleges méret ellenőrizendő
+H09 | 2 db | Vezető- és biztosítócsavar | M3 × 40; fej Ø5,5 × 3 mm
+H10 | 2 db | Horonygerenda csavarja | M3 × 20; fej Ø5,5 × 3 mm
+H11 | 8 db | Lapos alátét M3 | Külső Ø7; belső Ø3,2; vastagság 0,5 mm
+H12 | 2 db | Puha gitárvédő csőbetét | Belső Ø14; külső Ø22; hossz 25 mm; lakkozással igazoltan kompatibilis
+H13 | 4 db | Önzáró anya M3 | CAD-burkolat: külső Ø6,35; magasság 4 mm
+
+Fali rögzítés: további 3 db, falazathoz választott csavar/dübel.
+A rugó konkrét cikkszáma és ereje fizikai próbával véglegesítendő.
