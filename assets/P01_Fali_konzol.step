@@ -10,7 +10,7 @@ FILE_DESCRIPTION(
 
 FILE_NAME(
 /* name */ 'P01_Fali_konzol.step',
-/* time_stamp */ '2026-11-03T09:13:34+01:00',
+/* time_stamp */ '2026-11-03T11:41:20+01:00',
 /* author */ (''),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v20.2',
@@ -977,7 +977,7 @@ SOLID_ANGLE_UNIT()
 #924=PRODUCT_DEFINITION_SHAPE('',$,#927);
 #925=SHAPE_REPRESENTATION('',(#539),#917);
 #926=PRODUCT_DEFINITION_CONTEXT('part definition',#931,'design');
-#927=PRODUCT_DEFINITION('2026-11-03-09-13-34-050',
+#927=PRODUCT_DEFINITION('2026-11-03-11-41-19-901',
 'P01 Fali konzol - egyben',#928,#926);
 #928=PRODUCT_DEFINITION_FORMATION('',$,#933);
 #929=PRODUCT_RELATED_PRODUCT_CATEGORY('P01 Fali konzol - egyben',
@@ -987,7 +987,7 @@ SOLID_ANGLE_UNIT()
 #931=APPLICATION_CONTEXT(
 'Core Data for Automotive Mechanical Design Process');
 #932=PRODUCT_CONTEXT('part definition',#931,'mechanical');
-#933=PRODUCT('2026-11-03-09-13-34-050','P01 Fali konzol - egyben',$,(#932));
+#933=PRODUCT('2026-11-03-11-41-19-901','P01 Fali konzol - egyben',$,(#932));
 #934=PRESENTATION_STYLE_ASSIGNMENT((#936));
 #935=PRESENTATION_STYLE_ASSIGNMENT((#937));
 #936=SURFACE_STYLE_USAGE(.BOTH.,#938);

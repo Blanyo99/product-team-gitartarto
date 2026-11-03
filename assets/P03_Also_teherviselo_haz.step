@@ -10,7 +10,7 @@ FILE_DESCRIPTION(
 
 FILE_NAME(
 /* name */ 'P03_Also_teherviselo_haz.step',
-/* time_stamp */ '2026-11-03T09:13:34+01:00',
+/* time_stamp */ '2026-11-03T11:41:20+01:00',
 /* author */ (''),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v20.2',
@@ -2546,7 +2546,7 @@ SOLID_ANGLE_UNIT()
 #2473=PRODUCT_DEFINITION_SHAPE('',$,#2476);
 #2474=SHAPE_REPRESENTATION('',(#1484),#2466);
 #2475=PRODUCT_DEFINITION_CONTEXT('part definition',#2480,'design');
-#2476=PRODUCT_DEFINITION('2026-11-03-09-13-34-450',
+#2476=PRODUCT_DEFINITION('2026-11-03-11-41-20-494',
 'P03 Also tehervisel\X2\0151\X0\ haz - egyben',#2477,#2475);
 #2477=PRODUCT_DEFINITION_FORMATION('',$,#2482);
 #2478=PRODUCT_RELATED_PRODUCT_CATEGORY(
@@ -2557,7 +2557,7 @@ SOLID_ANGLE_UNIT()
 #2480=APPLICATION_CONTEXT(
 'Core Data for Automotive Mechanical Design Process');
 #2481=PRODUCT_CONTEXT('part definition',#2480,'mechanical');
-#2482=PRODUCT('2026-11-03-09-13-34-450',
+#2482=PRODUCT('2026-11-03-11-41-20-494',
 'P03 Also tehervisel\X2\0151\X0\ haz - egyben',$,(#2481));
 #2483=PRESENTATION_STYLE_ASSIGNMENT((#2485));
 #2484=PRESENTATION_STYLE_ASSIGNMENT((#2486));

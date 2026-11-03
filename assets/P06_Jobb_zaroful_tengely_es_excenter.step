@@ -10,7 +10,7 @@ FILE_DESCRIPTION(
 
 FILE_NAME(
 /* name */ 'P06_Jobb_zaroful_tengely_es_excenter.step',
-/* time_stamp */ '2026-11-03T09:13:34+01:00',
+/* time_stamp */ '2026-11-03T11:41:21+01:00',
 /* author */ (''),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v20.2',
@@ -532,7 +532,7 @@ SOLID_ANGLE_UNIT()
 #464=PRODUCT_DEFINITION_SHAPE('',$,#467);
 #465=SHAPE_REPRESENTATION('',(#245),#457);
 #466=PRODUCT_DEFINITION_CONTEXT('part definition',#471,'design');
-#467=PRODUCT_DEFINITION('2026-11-03-09-13-34-877',
+#467=PRODUCT_DEFINITION('2026-11-03-11-41-21-118',
 'P06 Jobb zaroful tengely es excenter - egyben',#468,#466);
 #468=PRODUCT_DEFINITION_FORMATION('',$,#473);
 #469=PRODUCT_RELATED_PRODUCT_CATEGORY(
@@ -543,7 +543,7 @@ SOLID_ANGLE_UNIT()
 #471=APPLICATION_CONTEXT(
 'Core Data for Automotive Mechanical Design Process');
 #472=PRODUCT_CONTEXT('part definition',#471,'mechanical');
-#473=PRODUCT('2026-11-03-09-13-34-877',
+#473=PRODUCT('2026-11-03-11-41-21-118',
 'P06 Jobb zaroful tengely es excenter - egyben',$,(#472));
 #474=PRESENTATION_STYLE_ASSIGNMENT((#476));
 #475=PRESENTATION_STYLE_ASSIGNMENT((#477));
