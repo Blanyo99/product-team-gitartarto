@@ -41,7 +41,7 @@ async function loadDefaultModel(){
  input.disabled=true;openButton.disabled=true;
  status.textContent='A 3D modell betöltése…';
  try{
-  const response=await fetch('assets/gitartarto-vegleges.step');
+  const response=await fetch('assets/gitartarto-vegleges.step?v=e6f3af5188');
   if(!response.ok)throw Error('STEP download failed');
   const modelFile=new File([await response.arrayBuffer()],'Gitártartó — végleges CAD-modell.step');
   viewerModule=viewerModule||await import('./viewer.js');
