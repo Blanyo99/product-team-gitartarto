@@ -6,30 +6,6 @@ input.addEventListener('change',async()=>{const file=input.files[0];if(!file)ret
 
 document.getElementById('open-step').addEventListener('click',()=>input.click());
 
-// Add the finished recording as the src of #blanka-video; controls activate on metadata load.
-const homeVideo=document.getElementById('blanka-video');
-const filmFrame=document.getElementById('blanka-video-frame');
-const filmPlay=document.getElementById('blanka-play');
-const filmMute=document.getElementById('blanka-mute');
-const filmFullscreen=document.getElementById('blanka-fullscreen');
-homeVideo.controls=false;
-const filmTime=value=>Number.isFinite(value)?Math.floor(value/60)+':'+String(Math.floor(value%60)).padStart(2,'0'):'--:--';
-function updateFilmPlay(){const paused=homeVideo.paused;filmPlay.setAttribute('aria-label',paused?'Lejátszás':'Megállítás');filmPlay.innerHTML='<span aria-hidden="true">'+(paused?'▶':'Ⅱ')+'</span><span class="control-label">'+(paused?'Lejátszás':'Megállítás')+'</span>';}
-function activateFilm(){const ready=homeVideo.readyState>=1;document.getElementById('blanka-time').textContent=filmTime(homeVideo.currentTime)+' / '+filmTime(homeVideo.duration);homeVideo.hidden=!ready;filmPlay.disabled=!ready;filmMute.disabled=!ready;if(ready){document.getElementById('blanka-video-waiting').hidden=true;document.getElementById('blanka-video-badge').textContent='BLANKA OTTHONRÓL';}updateFilmPlay();}
-filmPlay.addEventListener('click',async()=>{if(homeVideo.paused){try{await homeVideo.play();}catch{document.getElementById('blanka-video-badge').textContent='A videó nem indítható el.';}}else homeVideo.pause();});
-filmMute.addEventListener('click',()=>{homeVideo.muted=!homeVideo.muted;});
-homeVideo.addEventListener('volumechange',()=>{filmMute.setAttribute('aria-pressed',String(homeVideo.muted));const label=homeVideo.muted?'Hang vissza':'Némítás';filmMute.setAttribute('aria-label',label);filmMute.querySelector('.control-label').textContent=label;});
-for(const event of ['play','pause','ended'])homeVideo.addEventListener(event,updateFilmPlay);
-for(const event of ['loadedmetadata','emptied'])homeVideo.addEventListener(event,activateFilm);
-homeVideo.addEventListener('timeupdate',()=>{document.getElementById('blanka-time').textContent=filmTime(homeVideo.currentTime)+' / '+filmTime(homeVideo.duration);});
-homeVideo.addEventListener('error',()=>{homeVideo.hidden=true;filmPlay.disabled=true;filmMute.disabled=true;document.getElementById('blanka-video-waiting').hidden=false;document.getElementById('blanka-video-badge').textContent='A videó nem érhető el.';});
-function updateFilmFullscreen(){const expanded=document.fullscreenElement===filmFrame||filmFrame.classList.contains('is-expanded');filmFullscreen.setAttribute('aria-pressed',String(expanded));filmFullscreen.setAttribute('aria-label',expanded?'Kicsinyítés':'Teljes képernyő');filmFullscreen.querySelector('.control-label').textContent=expanded?'Kicsinyítés':'Nagyítás';}
-function closeFilmFallback(){filmFrame.classList.remove('is-expanded');document.body.classList.remove('film-expanded');updateFilmFullscreen();filmFullscreen.focus();}
-filmFullscreen.addEventListener('click',async()=>{if(document.fullscreenElement===filmFrame){await document.exitFullscreen();return;}if(filmFrame.classList.contains('is-expanded')){closeFilmFallback();return;}try{if(!filmFrame.requestFullscreen)throw Error('Use expanded view');await filmFrame.requestFullscreen();}catch{filmFrame.classList.add('is-expanded');document.body.classList.add('film-expanded');}updateFilmFullscreen();});
-document.addEventListener('fullscreenchange',updateFilmFullscreen);
-document.addEventListener('keydown',event=>{if(event.key==='Escape'&&filmFrame.classList.contains('is-expanded'))closeFilmFallback();});
-window.addEventListener('hashchange',()=>{if(location.hash==='#tervezes'||location.hash==='#mellekletek'){homeVideo.pause();if(filmFrame.classList.contains('is-expanded'))closeFilmFallback();if(document.fullscreenElement===filmFrame)document.exitFullscreen().catch(()=>{});}});
-
 // Load the approved final model when its section comes into view.
 const defaultModelViewer=document.getElementById('viewer');
 let defaultModelStarted=false;
