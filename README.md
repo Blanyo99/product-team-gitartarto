@@ -6,7 +6,7 @@ Ketten tanulunk meg AI segítségével gitártartót tervezni, rövid bemutatóv
 
 - **A termék:** az ötlet, a videók helye és a valóban forgatható STEP-modell.
 - **A tervezés folyamata:** referenciák, nehézségek, nyomtathatóság és a weboldal készítésének története.
-- **Mellékletek:** darabjegyzék, robbantott ábra és a 8 nyomtatandó alkatrész STEP-fájljai.
+- **Mellékletek:** darabjegyzék, robbantott ábra és a 6 nyomtatandó alkatrész STEP-fájljai.
 - Saját Product Team logó és a Gibson Les Paul Dark Cherry Sunburst ihlette színvilág.
 
 ## Helyi megnyitás
@@ -23,7 +23,7 @@ GitHub Pages: **Settings → Pages → Deploy from a branch → main → / (root
 
 ## A modell későbbi frissítése
 
-A forgatható megjelenítőben a **végleges CAD-modell** töltődik be az `assets/gitartarto-vegleges.step` fájlból. A Mellékletek fülön külön is letölthető mind a 8 nyomtatandó alkatrész.
+A forgatható megjelenítőben a **végleges CAD-modell** töltődik be az `assets/gitartarto-vegleges.step` fájlból. A Mellékletek fülön külön is letölthető mind a 6 nyomtatandó alkatrész.
 
 Az új modell STEP-fájlja az `assets` mappába kerül. Az új fájlnevet az `app.js` `loadDefaultModel` függvényében és az `index.html` letöltési linkjében állítjuk be. A forgatás, nagyítás és műhelyháttér tovább használható.
 
