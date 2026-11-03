@@ -1,6 +1,6 @@
 # Product Team — saját fali gitártartó
 
-Ketten tanulunk meg AI segítségével gitártartót tervezni, rövid bemutatóvideót készíteni és weboldalt építeni. A projekt folyamatban van; a modellt és a videókat később is frissítjük.
+AI segítségével tanulok meg gitártartót tervezni, rövid bemutatóvideót készíteni és weboldalt építeni. A modellt és a videót később is frissítem.
 
 ## A weboldal
 
